@@ -1,0 +1,154 @@
+Matplotlib - Matplotlib is a comprehensive library for creating static, animated, and interactive visualization in python. It provides an 
+             object-oriented API for embedding plots into application using general-purpose GUI toolkits.
+
+Seaborn - Seaborn is a python data visualization library based on Matplotlib. It provides a high-level interface for drawing attractive 
+          and informative statical graphics.
+
+#Cerating a Simple Line Plot with Matplotlib
+#pip install matplotlib - for install matplotlib
+import matplotlib.pyplot as plt
+     x = [1,2,3,4,5]
+     y = [2,3,5,7,11]
+#Crteating a line plot
+     plt.plot(x,y,linestyles="dotted")
+     plt.plot(x,y)
+     plt.xlable('x-axis')
+     plt.ylable('y-axis')
+     plt.title('simple line plot')
+     plt.show()
+
+**************************************************************************************************************************************
+
+#Creating a Simple Scattter Plot with Matplotlib
+#Data
+x = [1,2,3,4,5]
+y = [2,3,5,7,11]
+
+#Creating a scatter plot
+plt.scatter(x,y)
+plt.xlabel('x'axis')
+plt.ylabel('y'axis')
+plt.title('simple scatter plot')
+plt.show()
+
+**************************************************************************************************************************************
+
+#Creating a simple bar plot with matplotlib
+#Data
+categories = ['A','B','C','D']
+values = [4,7,1,8]
+
+#Creating a bar plot
+plt.bar(categories, values)
+plt.xlabel('Categories')
+plt.ylabel('Values')
+plt.title('Simple Bar Plot')
+plt.show()
+
+**************************************************************************************************************************************
+
+#Creating a Simple Histogram with Matplotlib
+#Data 
+data = [1,2,2,3,3,3,4,4,4,4]\
+
+#Creating a histogram
+plt.hist(data, bins=4)
+plt.xlabel('Values')
+plt.ylabel('Frequency')
+plt.title('Simple Histogram')
+plt.show()
+
+**************************************************************************************************************************************
+
+#Creating subplots with Matplotlib
+#Data
+x = [1,2,3,4,5]
+y1 = [2,3,5,7,11]
+y2 = [1,4,6,8,10]
+
+#Creating subplots
+fig, axs = plt.subplots(2)
+axs[0].plot(x,y1)
+axs[0].set.title('First Plot')
+axs[1].plot(x, y2, 'tab:orange')
+axs[1].set_title('Second Plot')
+
+#Displaying the plot
+plt.tight_layout()
+plt.show()
+
+**************************************************************************************************************************************
+
+#Adding Annotations with Matplotlib
+#Data
+x = [1,2,3,4,5]
+y = [2,3,5,7,11]
+
+#Creating a plot with annotations
+plt.plot(x,y)
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.title('Plot with Annotations')
+plt.annotate('Peak', xy=(5, 11), xytext=(4,10),
+             arrowprops=dict(facecolor='black', shrink=0.05))
+plt.show()
+
+**************************************************************************************************************************************
+
+#Creating a Simple Line Plot with Seaborn
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+#Data
+x = [1,2,3,4,5]
+y = [2,3,5,7,11]
+
+#Creating a limne plot
+sns.lineplot(x=x, y=y)
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.title('Simple Line Plot with Seaborn')
+plt.show()
+
+**************************************************************************************************************************************
+
+#Creating a Simple Scatter Plot with Seaborn
+#Data 
+x = [1,2,3,4,5]
+y = [2,3,5,7,11]
+
+#Creating a scatter plot
+sns.scatterplot(x==x, y==y)
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.title('Simple Scatter Plot with Seaborn')
+plt.show()
+
+**************************************************************************************************************************************
+
+#Creating a Pair plot with seaborn 
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_iris
+
+iris = load_iris()
+iris_data = sns.load_datasets("iris")
+
+#Creating a pair plot
+sns.pairplot(iris_data, hue = 'species')
+plt.title('Pair Plot with Seaborn')
+plt.show()
+
+**************************************************************************************************************************************
+
+#Creating a Heatmap with seaborn
+
+import numpy as np
+ #Data
+data = np.random.rand(10,12)
+sns.heatmap(data)
+plt.title('Heatmap with Seaborn')
+plt.show()
+

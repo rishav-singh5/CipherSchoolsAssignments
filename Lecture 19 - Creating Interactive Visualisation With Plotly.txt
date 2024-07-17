@@ -1,0 +1,42 @@
+Introduction to Plotly
+Plotly is a graphing library that makes interactive, publication-quality graphs online. It supports a wide variety of charts, including 
+line plot, scatter plots, bar charts, histograms, heatmaps, and more. Plotly is particularly useful for creating interactive visualization 
+that cab be embedded in web application]s and sharexd online.
+
+#Installation 
+pip install plotly 
+
+#Loading  the dataset
+
+import pandas as pd
+#Load the dataset
+df = pd.read_csv('sales_data.CSV')
+print(df.head())
+
+#Creating a Line plot 
+
+import plotly.express as px
+#create a line plot
+  fig = px.line(df, x='Date', y='Sales', title='Sales Over Time', markers=True)
+  fig.show()
+
+#Creating a Bar chart
+fig = px.bar(df, x='Region', y='Sales by Region', color='Region')
+fig.show()
+
+#Create a Scatter Plot
+fig = px.scatter(df, x='Sales', y='Profit', title='Sales vs Profit', color='Region', size='Quantity', hover_data=['Product'])
+fig.show()
+
+#Create a Histogram
+#Creatye a Pie Chart
+
+#creating a interactive line plot
+fig = px.line(df, x='Date', y=''Sales', title='Interactive Sales Trend Over Time', markers=True, color='region', hover_data=['Product','Quantity'])
+fig.show()
+
+#Real Life Use case
+1. Sales Performance Analysis
+2. Customer Analysis
+3. Operational Efficiency
+

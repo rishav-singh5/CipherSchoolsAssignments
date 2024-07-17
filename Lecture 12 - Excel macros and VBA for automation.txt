@@ -1,0 +1,6 @@
+Excel macros
+- Macros in Excel are sequence of instructions that automate repetitive tasks.
+- They are recorded actions that you can pay back to automate processes.
+VBA (Visual Basic for Applications)
+- VBA is a programming language integrated into Microsoft Office applications.
+- It allows user to write custom code to automate tasks, create userdefined functions, and control Excel's features programmatically.
